@@ -1,0 +1,141 @@
+.calendar-cell {
+  background: var(--color-light-yellow);
+  min-height: 120px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-dark-brown);
+  border-right: 0.5px solid var(--color-deep-brown);
+  border-bottom: 0.5px solid var(--color-deep-brown);
+}
+
+/* Add left border to the first cell in each row */
+.calendar-cell:nth-child(7n+1) {
+  border-left: 0.5px solid var(--color-deep-brown);
+}
+
+/* Add top border to the first row */
+.calendar-cell:nth-child(-n+7) {
+  border-top: 0.5px solid var(--color-deep-brown);
+}
+
+/* Right border for last column */
+.calendar-cell:nth-child(7n) {
+  border-right: 0.5px solid var(--color-deep-brown);
+}
+
+/* Bottom border for last row (assuming 6 rows max, adjust if needed) */
+.calendar-cell:nth-last-child(-n+7) {
+  border-bottom: 0.5px solid var(--color-deep-brown);
+}
+
+.calendar-cell:hover {
+  background: var(--color-warm-beige);
+  transform: scale(1.02);
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--color-deep-brown);
+}
+
+.calendar-cell.other-month {
+  background: var(--color-warm-orange);
+  color: var(--color-dark-brown);
+}
+
+.calendar-cell.other-month:hover {
+  background: var(--color-peach);
+  transform: scale(1.02);
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--color-deep-brown);
+}
+
+.calendar-cell.today {
+  background: var(--color-peach);
+  color: var(--color-dark-brown);
+}
+
+.calendar-cell.today:hover {
+  background: var(--color-warm-beige);
+}
+
+.date-number {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+.events-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.more-events {
+  font-size: 0.75rem;
+  color: var(--color-dark-brown);
+  font-weight: 500;
+  padding: 2px 4px;
+  background: var(--color-soft-taupe);
+  border-radius: 4px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.calendar-cell.today .more-events {
+  color: var(--color-dark-brown);
+  background: var(--color-warm-beige);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .calendar-cell {
+    min-height: 100px;
+    padding: 6px;
+  }
+  
+  .date-number {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-cell {
+    min-height: 80px;
+    padding: 6px;
+  }
+
+  .date-number {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+
+  .more-events {
+    font-size: 0.7rem;
+    padding: 1px 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-cell {
+    min-height: 70px;
+    padding: 4px;
+  }
+  
+  .date-number {
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+  }
+  
+  .more-events {
+    font-size: 0.65rem;
+    padding: 1px 2px;
+  }
+} 

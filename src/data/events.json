@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Team Meeting",
+    "date": "2024-01-15",
+    "time": "10:00",
+    "duration": 60,
+    "description": "Weekly team sync meeting",
+    "color": "#3B82F6"
+  },
+  {
+    "id": 2,
+    "title": "Client Presentation",
+    "date": "2024-01-18",
+    "time": "14:00",
+    "duration": 90,
+    "description": "Present quarterly results to client",
+    "color": "#10B981"
+  },
+  {
+    "id": 3,
+    "title": "Code Review",
+    "date": "2024-01-20",
+    "time": "16:00",
+    "duration": 45,
+    "description": "Review pull requests",
+    "color": "#F59E0B"
+  },
+  {
+    "id": 4,
+    "title": "Lunch with Sarah",
+    "date": "2024-01-22",
+    "time": "12:30",
+    "duration": 60,
+    "description": "Catch up over lunch",
+    "color": "#8B5CF6"
+  },
+  {
+    "id": 5,
+    "title": "Project Deadline",
+    "date": "2024-01-25",
+    "time": "17:00",
+    "duration": 120,
+    "description": "Final project submission",
+    "color": "#EF4444"
+  },
+  {
+    "id": 6,
+    "title": "Morning Standup",
+    "date": "2024-01-15",
+    "time": "09:00",
+    "duration": 15,
+    "description": "Daily standup meeting",
+    "color": "#06B6D4"
+  },
+  {
+    "id": 7,
+    "title": "Design Workshop",
+    "date": "2024-01-18",
+    "time": "13:00",
+    "duration": 120,
+    "description": "UX/UI design workshop",
+    "color": "#EC4899"
+  },
+  {
+    "id": 8,
+    "title": "Product Demo",
+    "date": "2024-01-20",
+    "time": "15:00",
+    "duration": 60,
+    "description": "Demo new features to stakeholders",
+    "color": "#84CC16"
+  }
+] 

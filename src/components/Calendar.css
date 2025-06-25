@@ -1,0 +1,17 @@
+.calendar-container {
+  background: var(--color-light-yellow);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(84, 134, 135, 0.12);
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--color-dark-brown);
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    border-radius: 15px;
+    margin: 0 10px;
+  }
+} 

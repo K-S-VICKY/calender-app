@@ -1,0 +1,313 @@
+.App {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .App {
+    max-width: 100%;
+  }
+}
+
+.toggle-time-btn {
+  background: var(--color-deep-brown);
+  color: var(--color-light-yellow);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 8px;
+  min-width: 80px;
+  text-align: center;
+}
+.toggle-time-btn:hover {
+  background: var(--color-brick-red);
+  color: var(--color-light-yellow);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--color-offwhite);
+}
+
+.sidebar {
+  width: 320px;
+  min-width: 260px;
+  max-width: 360px;
+  background: var(--color-warm-peach);
+  box-shadow: 2px 0 16px 0 rgba(139, 115, 85, 0.15);
+  border-radius: 0 24px 24px 0;
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+@media (max-width: 1200px) {
+  .main-content {
+    padding: 30px 24px;
+  }
+  
+  .sidebar {
+    width: 280px;
+    min-width: 240px;
+    padding: 24px 20px 20px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 0 0 24px 24px;
+    padding: 20px 16px;
+    gap: 24px;
+  }
+  .main-content {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 16px 12px;
+    gap: 20px;
+  }
+  .main-content {
+    padding: 16px 12px;
+  }
+}
+
+.calendar-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-deep-brown);
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(71, 51, 53, 0.06);
+  padding: 18px 28px;
+  margin-bottom: 32px;
+  gap: 16px;
+  color: var(--color-light-yellow);
+}
+
+.calendar-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calendar-header-month {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-light-yellow);
+  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendar-header-month select {
+  background: var(--color-brick-red);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-light-yellow);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  outline: none;
+  min-width: 120px;
+}
+
+.calendar-header-month select:hover {
+  background: var(--color-warm-beige);
+  color: var(--color-dark-brown);
+}
+
+.calendar-header-month select:focus {
+  background: var(--color-warm-beige);
+  color: var(--color-dark-brown);
+  box-shadow: 0 0 0 2px var(--color-light-yellow);
+}
+
+.calendar-nav-btn {
+  background: var(--color-brick-red);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-light-yellow);
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.calendar-nav-btn:hover {
+  background: var(--color-warm-beige);
+  color: var(--color-dark-brown);
+}
+
+.calendar-today-btn {
+  background: var(--color-brick-red);
+  color: var(--color-light-yellow);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 7px 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.calendar-today-btn:hover {
+  background: var(--color-warm-beige);
+  color: var(--color-dark-brown);
+}
+
+.calendar-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calendar-view-toggle {
+  background: var(--color-light-yellow);
+  color: var(--color-dark-brown);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.calendar-view-toggle.active, .calendar-view-toggle:hover {
+  background: var(--color-peach);
+  color: var(--color-dark-brown);
+}
+.calendar-new-event-btn {
+  background: var(--color-brick-red);
+  color: var(--color-light-yellow);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 7px 18px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.calendar-new-event-btn:hover {
+  background: var(--color-peach);
+  color: var(--color-dark-brown);
+}
+.calendar-avatar {
+  margin-left: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-peach);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .calendar-header-bar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+  
+  .calendar-header-left {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .calendar-header-right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .calendar-header-month {
+    font-size: 1.2rem;
+  }
+  
+  .calendar-header-month select {
+    font-size: 1rem;
+    min-width: 100px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-header-bar {
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  
+  .calendar-header-month {
+    font-size: 1.1rem;
+  }
+  
+  .calendar-header-month select {
+    font-size: 0.9rem;
+    min-width: 90px;
+    padding: 5px 10px;
+  }
+} 
